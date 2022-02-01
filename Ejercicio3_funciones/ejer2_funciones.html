@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 2 Uso funciones</title>
+</head>
+<body>
+    <script>
+        let letras = prompt("Escribe una cadena");
+        function mayusmin (cadena){
+            if (cadena == cadena.toUpperCase()){
+                return "todas son mayúsculas";
+            }
+            else if (cadena == cadena.toLowerCase()){
+                    return "todas son minusculas";
+                }
+                else{
+                    return "tiene mayúsculas y minusculas";
+                }
+        }
+        document.write("La cadena dada "+mayusmin(letras))
+    </script>
+</body>
+</html>

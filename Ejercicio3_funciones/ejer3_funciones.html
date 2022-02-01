@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 3 Uso funciones</title>
+</head>
+<body>
+    <script>
+        let cadena = prompt("Dime una frase");
+        function palindromo(valor){
+            // Eliminamos los espacios
+            valor = valor.replace(/\s/g,'')
+
+            //Cambiamos el orden de las letras
+            let valorReverse = valor.split("").reverse().join("")
+            
+            if (valor == valorReverse){
+                return "es un palindromo"
+            }
+            else{
+                return "no es un palindromo"
+            }
+        }
+
+        document.write(palindromo(cadena));
+    </script>
+</body>
+</html>

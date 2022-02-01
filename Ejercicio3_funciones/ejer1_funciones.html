@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 1 Uso funciones</title>
+</head>
+<body>
+    <script>
+        let numask = Number(prompt("Dime un numero"));
+        function parimpar(numero){
+            if (numero % 2 == 0){
+                return "es par";
+            }
+            else {
+                return "es impar";
+            }
+        }
+        document.write("El numero "+ parimpar(numask));
+    </script>
+</body>
+</html>
