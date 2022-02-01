@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Clase suma</title>
+    </head>
+    <body>
+        <script>
+            class Suma{
+            constructor (sum1,sum2) {
+                this.sum1=sum1;
+                this.sum2=sum2;
+            }
+            suma(){
+                return (this.sum1)+(this.sum2);
+            }
+        }
+        let sum1 = Number(prompt("Escribe un sumando"));
+        let sum2 = Number(prompt("Escribe otro sumando"));
+        const sumando=new Suma (sum1,sum2);
+
+        document.write("Los números a sumar son "+sum1+" + "+sum2+"<br>");
+
+        //métodos
+        
+        document.write("Su suma es "+sumando.suma()+"<br>");
+
+        </script>
+    </body>
+</html>

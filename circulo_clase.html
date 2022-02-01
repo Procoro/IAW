@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Clase circulo</title>
+    </head>
+    <body>
+        <script>
+            class Circulo{
+            constructor (radio) {
+                this.radio=radio;
+            }
+            area(){
+                return this.radio*(pi*pi);
+            }
+            perimetro (){
+                return 2*pi*this.radio;
+            }
+        }
+        let pi = 3.14159265358979323846;
+        let radio = prompt("Radio del círculo");
+        const circulo1=new Circulo (radio);
+
+        document.write("El radio del círculo es "+radio+"<br>");
+
+        //métodos
+        
+        document.write("El área del círculo es "+circulo1.area()+"<br>");
+        document.write("El perímetro es "+circulo1.perimetro()+"<br>");
+
+        </script>
+    </body>
+</html>
