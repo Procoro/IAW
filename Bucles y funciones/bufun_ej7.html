@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 7 Bucles y funciones</title>
+</head>
+<body>
+    <script>
+        function suma (num1, num2) {
+        let resultado = num1 + num2;
+        document.write("La suma de "+num1+ " y "+num2+ " es " + resultado);
+        }
+
+        function resta (num1, num2) {
+        let resultado = num1 - num2;
+        document.write("La resta de "+num1+ " y "+num2+ " es " + resultado);
+        }
+
+        function mult (num1, num2) {
+        let resultado = num1 * num2;
+        document.write("La multiplicación de "+num1+ " y "+num2+ " es " + resultado);
+        }
+
+        function div (num1, num2) {
+        let resultado = num1 / num2;
+        let resto = num1 % num2;
+        document.write("La división de "+num1+ " y "+num2+ " es " + resultado+"<br>");
+        document.write("Su resto es = " + resto);
+        }
+
+
+        let opciones = Number(prompt("Elige la operación matemática: \n 1. Suma \n 2. Resta \n 3. Multiplicación \n 4. División"));
+
+        switch(opciones){
+            case 1:
+                suma(Number(prompt("Introduce el primer número: ")),Number(prompt("Introduce el segundo número: ")));
+                break;
+            case 2:
+                resta(Number(prompt("Introduce el primer número: ")), Number(prompt("Introduce el segundo número: ")));
+                break;
+            case 3:
+                mult(Number(prompt("Introduce el primer número: ")), Number(prompt("Introduce el segundo número: ")));
+                break;
+            case 4:
+                div(Number(prompt("Introduce el primer número: ")), Number(prompt("Introduce el segundo número: ")));
+                break;
+
+        }
+    </script>
+</body>
+</html>

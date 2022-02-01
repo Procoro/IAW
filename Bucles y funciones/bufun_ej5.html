@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 5 Bucles y funciones</title>
+</head>
+<body>
+    <script>
+            function MenoraMayor(a, b, c)
+
+            {
+
+            if (a<b && a<x3 && b < c) { 
+                document.write( a +" "+ b +" "+c ); 
+            }
+            else if (a<b && a<c && c < b) { 
+                document.write( a +" "+ c +" "+b ); 
+            }
+            else if (b<c && a<c) { 
+                document.write( b +" "+ a +" "+c ); 
+            }
+            else if (b<c && c<a) { 
+                document.write( b +" "+ c +" "+a ); 
+            }
+            else if (b<a) { 
+                document.write( c +" "+ b +" "+a ); 
+            }
+            else { 
+                document.write( c +" "+ a +" "+b ); 
+            }
+            }
+
+            let n1=Number(prompt('Introduzca el primer número:'));
+
+            let n2=Number(prompt('Introduzca el segundo número:',));
+
+            let n3=Number(prompt('Introduzca el tercer número:'));
+
+            MenoraMayor(n1, n2, n3);
+    </script>
+</body>
+</html>

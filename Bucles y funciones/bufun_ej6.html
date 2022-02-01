@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 6 Bucles y funciones</title>
+</head>
+<body>
+    <script>
+        function primono(num) {
+        let sol;
+        for (i = 2; i < num; i++) {
+            if (num % i == 0) {
+                sol = 1;
+            }
+        }
+        if (sol == 1){
+            document.write("El número no es primo");
+        }
+        else{
+            document.write("El número es primo");
+        }
+        
+        } 
+        primono(prompt("Número a comprobar"));
+    </script>
+</body>
+</html>

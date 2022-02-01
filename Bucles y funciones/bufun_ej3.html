@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 3 Bucles y funciones</title>
+</head>
+<body>
+    <script>
+        let cadena = Number(prompt("Dime un numero"));
+        while (cadena < 2 || cadena > 10){
+            cadena = Number(prompt("Dime un numero entre 2 y 10"));
+        }
+        for (let index = 0; index <= 10; index++) {
+            document.write("<p>"+ index + " x " + cadena + " = " + index*cadena + "</p>")
+        }
+
+    </script>
+</body>
+</html>
