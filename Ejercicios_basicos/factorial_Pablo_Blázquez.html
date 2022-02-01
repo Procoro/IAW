@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Factorial de un numero</title>
+</head>
+<body>
+    <script>
+        let total = 1;
+        let num = Number(prompt("Numero"));
+        for (let index = 1; index <= num; index++) {
+            total = total * index;            
+        }
+        document.write("El factorial de "+ num + " es: "+ total);
+    </script>
+</body>
+</html>

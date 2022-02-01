@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicios básicos JavaScript 4</title>
+</head>
+<body>
+    <script>
+        let cadena = String(prompt("Introduzca una cadena de caracteres"));
+
+        if (cadena.length < 6){
+            document.write (cadena);
+        }
+        else {
+            document.write(cadena.substring(0,3) + cadena.slice(-3));
+        }
+    </script>
+</body>
+</html>
