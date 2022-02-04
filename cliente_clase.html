@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Clase cliente</title>
+    </head>
+    <body>
+        <script>
+            class Cliente{
+            constructor (nombre,saldo) {
+                this.nombre=nombre;
+                this.saldo=saldo;
+            }
+            depositar(dinero){
+                this.saldo=this.saldo+dinero
+                return this.saldo;
+            }
+            retirar(dinero){
+                this.saldo=this.saldo-dinero
+                return this.saldo;
+            }
+            // actual(){
+            //     return (this.saldo-clientes.retirar)+clientes.depositar;
+            // }
+        }
+        let dineromas = Number(prompt("Escribe cuanto desea depositar"));
+        let dineromenos = Number(prompt("Escribe cuanto desea retirar"));
+        const clientes=new Cliente ('Pablo',1300);
+
+        document.write("El nombre de su cliente es "+clientes.nombre+"<br>");
+        document.write("Su saldo era es "+clientes.saldo+"<br>");
+
+        //métodos
+        document.write("Cantidad depositada: "+dineromas+" Saldo actual: "+clientes.depositar(dineromas)+"<br>");
+        document.write("Cantidad retirada "+dineromenos+" Saldo actual: "+clientes.retirar(dineromenos)+"<br>");
+        document.write(`Su saldo actual es ${clientes.saldo}`)
+
+
+        </script>
+    </body>
+</html>
