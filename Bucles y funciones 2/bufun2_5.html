@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 5 Bucles y funciones 2</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        let valor;
+        let suma = 0;
+        do {
+            valor = Number(prompt('Ingrese un valor menor a 9999'));
+            if (valor != 9999) {
+                suma = suma + valor;
+            }
+        } while (valor != 9999);
+        document.write('Valor acumulado total:' + suma +'<br>');
+        if (suma > 0) {
+            document.write('El valor acumulado es mayor a cero');
+        } else {
+            if (suma == 0) {
+                document.write('El valor acumulado es cero');
+            } else {
+                document.write('El valor acumulado es menor a cero');
+            }
+        }
+    </script>
+</body>
+</html>  
