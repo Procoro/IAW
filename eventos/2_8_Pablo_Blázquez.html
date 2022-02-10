@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejer 2 Eventos</title>
+</head>
+<body>
+    <script>
+        let num = 0;
+        function sumarContador(){
+            for (let num = 0; num < 20; num++) {
+                document.write( "El contador vale "+ num);
+                break;
+            }
+        }
+
+    </script>
+    <button id="suma" onclick="return sumarContador()">Sumar</button>
+</body>
+</html>
