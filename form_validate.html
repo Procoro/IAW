@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo_form.css">
+    <title>Validate Form</title>
+</head>
+<body>
+    <script>
+        //Validación nombre
+        function validarFormulario(){
+            var nombre = document.getElementById("txt_nombre").value;
+            if (nombre.length == null){
+                alert("Debes rellenar el campo de Nombre");
+                return false;
+            }
+        //Validación apellido
+            var apellidos = document.getElementById("txt_apellidos").value;
+            if (apellidos == ""){
+                alert("Debes rellenar el campo de Apellidos");
+                return false;
+            }
+        //Validación email
+            var email = document.getElementById("ema_email").value;
+            var expRegEmail = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+            if (!expRegEmail.test(email)) {
+            alert ("El email introducido no es correcto");
+            return false;
+        }
+            // if (email == null){
+            //     alert("Debe introducir una dirección de correo");
+            //     return false;
+            // }
+            // else (!expRegEmail.test(email)) {
+            // alert ("El email introducido no es correcto");
+            // return false;
+            // }
+        //Radios sexo
+            var optRadio = document.getElementsByName("rad_sexo");
+            var checked = false;
+            for(var i=0; i<optRadio.length; i++) {
+                if(optRadio[i].checked) {
+                     checked = true;
+                    break; 
+                }
+            }
+            if(!checked) {
+            alert ("Debes seleccionar tu sexo");
+            return false;
+            }
+        //Botón checkbox
+            var textarea = document.getElementById("txtarea_escribe");
+                if (textarea == ""){
+                    alert("Debes insertar un mensaje");
+                    return false;
+                }
+            var check_publicidad = document.getElementById("check_publicidad");
+                if (!check_publicidad.checked){
+                    alert("Debes dejar que te enviemos publicidad, viruses coming")
+                    return false;
+                }
+            var procedencia = document.getElementById("dat_opciones");
+                if (procedencia == null || procedencia == 0) {
+                    alert("Debes seleccionar tu procedencia")
+                    return false;
+                }
+            return true;
+            };
+    </script>
+    <form id="formulario" onsubmit="return validarFormulario()">
+        <label>Nombre:</label>
+            <input type="text" id="txt_nombre" name="txt_nombre"><br>
+        <label>Apellidos:</label>
+            <input type="text" id="txt_apellidos" name="txt_apellidos"><br>
+        <label>Email:</label>
+            <input type="email" id="ema_email" name="ema_email"><br>
+            <input type="radio" id="rad_mujer" name="rad_sexo">
+        <label>Mujer</label><br>
+            <input type="radio" id="rad_hombre" name="rad_sexo">
+        <label>Hombre</label><br>
+        <label>Escribe aquí tu mensaje</label><br>
+            <textarea id="txtarea_escribe" name="txtarea_escribe" placeholder="....mensaje aquí...."></textarea><br>
+            <input type="checkbox" id="check_publicidad" name="check_publicidad">
+        <label>Deseo recibir publicidad en mi email</label><br>
+        <label>Procedencia</label>
+            <input list="opciones" id="inp_opciones">
+                <datalist id="dat_opciones">
+                    <option>España</option>
+                    <option>Paraguay</option>
+                    <option>Rusia</option>
+                </datalist><br>
+        <label>Adjuntar archivo:</label><br>
+            <input type="file" id="file_adjuntar" name="file_adjuntar">
+        <br>
+        <br>
+            <input value="Enviar" type="submit" id="submit">
+            <input value="Borrar datos" type="reset" id="but_borrar" name="but_borrar">
+
+    </form>
+</body>
+</html>
